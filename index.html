@@ -1,400 +1,1461 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2025年央视315晚会总结</title>
-    <style>
-        :root {
-            --primary-color: #3a6ea5;
-            --background-color: #f8f9fa;
-            --text-color: #333;
-            --section-bg: #fff;
-            --border-color: #ddd;
-            --highlight-color: #f0f7ff;
-            --link-color: #0366d6;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--background-color);
-            padding: 0;
-            margin: 0;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            flex-wrap: wrap;
-        }
-        
-        header {
-            width: 100%;
-            background-color: var(--primary-color);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        
-        /* Table of Contents */
-        .toc {
-            width: 25%;
-            position: sticky;
-            top: 20px;
-            align-self: flex-start;
-            background-color: var(--section-bg);
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin-right: 2rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        .toc h2 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            font-size: 1.4rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--border-color);
-        }
-        
-        .toc ul {
-            list-style-type: none;
-        }
-        
-        .toc li {
-            margin-bottom: 0.8rem;
-        }
-        
-        .toc a {
-            color: var(--link-color);
-            text-decoration: none;
-            font-size: 1rem;
-            display: block;
-            padding: 0.3rem 0;
-            transition: all 0.2s ease;
-        }
-        
-        .toc a:hover {
-            color: var(--primary-color);
-            padding-left: 5px;
-        }
-        
-        /* Main Content */
-        main {
-            width: 70%;
-            background-color: var(--section-bg);
-            border-radius: 8px;
-            padding: 2rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        section {
-            margin-bottom: 2.5rem;
-        }
-        
-        h2 {
-            color: var(--primary-color);
-            margin-bottom: 1.2rem;
-            font-size: 1.8rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--border-color);
-        }
-        
-        h3 {
-            color: var(--text-color);
-            margin: 1.5rem 0 1rem;
-            font-size: 1.4rem;
-        }
-        
-        p {
-            margin-bottom: 1rem;
-            font-size: 1.05rem;
-        }
-        
-        ul, ol {
-            margin-left: 2rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        li {
-            margin-bottom: 0.5rem;
-        }
-        
-        .problem-item {
-            background-color: var(--highlight-color);
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            border-left: 4px solid var(--primary-color);
-        }
-        
-        .problem-item h3 {
-            margin-top: 0;
-            color: var(--primary-color);
-        }
-        
-        .company-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .company-category {
-            flex: 1 1 300px;
-            background-color: var(--highlight-color);
-            border-radius: 8px;
-            padding: 1rem;
-        }
-        
-        .company-category h4 {
-            margin-bottom: 0.8rem;
-            color: var(--primary-color);
-        }
-        
-        footer {
-            width: 100%;
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 3rem;
-            color: #666;
-            font-size: 0.9rem;
-            border-top: 1px solid var(--border-color);
-        }
-        
-        /* Responsive design */
-        @media (max-width: 900px) {
-            .container {
-                flex-direction: column;
-            }
-            
-            .toc, main {
-                width: 100%;
-                margin-right: 0;
-            }
-            
-            .toc {
-                position: relative;
-                margin-bottom: 2rem;
-            }
-        }
-        
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            
-            main {
-                padding: 1.5rem;
-            }
-            
-            .problem-item {
-                padding: 1rem;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>梅友飞 - 前端开发工程师</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --secondary: #8b5cf6;
+      --dark: #0f172a;
+      --darker: #020617;
+      --light: #f8fafc;
+      --gray: #64748b;
+      --success: #22c55e;
+      --border-radius: 8px;
+      --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--darker);
+      color: var(--light);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* 导航栏 */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(2, 6, 23, 0.8);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      transition: all 0.3s ease;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: var(--light);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      font-size: 16px;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    /* 英雄区 */
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+      opacity: 0.1;
+      border-radius: 50%;
+      z-index: -1;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -10%;
+      right: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, var(--secondary) 0%, transparent 70%);
+      opacity: 0.1;
+      border-radius: 50%;
+      z-index: -1;
+    }
+
+    .hero-content {
+      max-width: 650px;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      line-height: 1.2;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: fadeInUp 1s ease;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: var(--gray);
+      animation: fadeInUp 1s 0.2s ease both;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      color: var(--light);
+      border: none;
+      border-radius: var(--border-radius);
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      animation: fadeInUp 1s 0.4s ease both;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
+    }
+
+    .scroll-down {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: var(--gray);
+      font-size: 14px;
+      text-align: center;
+      animation: bounce 2s infinite;
+    }
+
+    .scroll-down i {
+      display: block;
+      font-size: 24px;
+      margin-top: 5px;
+    }
+
+    /* 关于我 */
+    .section {
+      padding: 100px 0;
+      overflow: hidden;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+      position: relative;
+    }
+
+    .section-title h2 {
+      font-size: 2.5rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title h2::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -10px;
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      padding: 0 100px;
+    }
+
+    .about-img {
+      position: relative;
+    }
+
+    .about-img-inner {
+      width: 100%;
+      height: 400px;
+      background-color: var(--dark);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: var(--box-shadow);
+      position: relative;
+    }
+
+    .about-img-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-info {
+      position: relative;
+    }
+
+    .about-info h3 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .about-info p {
+      margin-bottom: 15px;
+      color: var(--gray);
+    }
+
+    .info-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .info-item i {
+      color: var(--primary);
+      font-size: 20px;
+      margin-right: 10px;
+    }
+
+    .info-item span {
+      font-weight: 600;
+      margin-right: 5px;
+      color: var(--light);
+    }
+
+    /* 技能 */
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .skill-category {
+      background-color: var(--dark);
+      border-radius: var(--border-radius);
+      padding: 30px;
+      box-shadow: var(--box-shadow);
+      transition: transform 0.3s ease;
+    }
+
+    .skill-category:hover {
+      transform: translateY(-5px);
+    }
+
+    .skill-category h3 {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      color: var(--primary);
+      position: relative;
+      padding-left: 30px;
+    }
+
+    .skill-category h3 i {
+      position: absolute;
+      left: 0;
+      top: 3px;
+    }
+
+    .skills-list {
+      list-style: none;
+    }
+
+    .skills-list li {
+      margin-bottom: 15px;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .skills-list li::before {
+      content: '•';
+      color: var(--secondary);
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    /* 项目经验 */
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 30px;
+    }
+
+    .project-card {
+      background-color: var(--dark);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: var(--box-shadow);
+      transition: transform 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-header {
+      padding: 20px;
+      position: relative;
+      background: linear-gradient(to right, var(--primary-dark), var(--primary));
+    }
+
+    .project-title {
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+      color: var(--light);
+    }
+
+    .project-subtitle {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .project-body {
+      padding: 20px;
+      flex-grow: 1;
+    }
+
+    .project-description {
+      margin-bottom: 15px;
+      color: var(--gray);
+    }
+
+    .project-tech {
+      margin-top: 15px;
+    }
+
+    .project-tech h4 {
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+      color: var(--light);
+    }
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .tech-tag {
+      padding: 4px 10px;
+      background-color: rgba(37, 99, 235, 0.2);
+      border-radius: 20px;
+      font-size: 0.75rem;
+      color: var(--primary);
+    }
+
+    /* 自我评价 */
+    .evaluation-container {
+      background-color: var(--dark);
+      border-radius: var(--border-radius);
+      padding: 40px;
+      box-shadow: var(--box-shadow);
+    }
+
+    .evaluation-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .evaluation-item {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .evaluation-item i {
+      color: var(--success);
+      font-size: 24px;
+      margin-right: 15px;
+      margin-top: 5px;
+    }
+
+    .evaluation-text p {
+      color: var(--gray);
+    }
+
+    /* 联系方式 */
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .contact-info {
+      background-color: var(--dark);
+      border-radius: var(--border-radius);
+      padding: 40px;
+      box-shadow: var(--box-shadow);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 25px;
+    }
+
+    .contact-item i {
+      color: var(--primary);
+      font-size: 24px;
+      margin-right: 15px;
+    }
+
+    .contact-item-text h3 {
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+    }
+
+    .contact-item-text p {
+      color: var(--gray);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .social-link {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: var(--darker);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--light);
+      transition: all 0.3s ease;
+    }
+
+    .social-link:hover {
+      background-color: var(--primary);
+      transform: translateY(-3px);
+    }
+
+    /* 页脚 */
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      color: var(--gray);
+      font-size: 0.9rem;
+    }
+
+    /* 动画 */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes bounce {
+
+      0%,
+      20%,
+      50%,
+      80%,
+      100% {
+        transform: translateX(-50%) translateY(0);
+      }
+
+      40% {
+        transform: translateX(-50%) translateY(-10px);
+      }
+
+      60% {
+        transform: translateX(-50%) translateY(-5px);
+      }
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    .fade-in.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* 响应式设计 */
+    @media (max-width: 992px) {
+      .about-content {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+      }
+
+      .projects-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .nav-links {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .info-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* 自定义滚动条 */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--dark);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--primary);
+      border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--primary-dark);
+    }
+
+    /* 代码编辑器效果 */
+    .code-editor {
+      position: absolute;
+      top: -30px;
+      right: -30px;
+      width: 350px;
+      height: 350px;
+      background-color: var(--darker);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: var(--box-shadow);
+      transform: rotate(8deg);
+      z-index: -1;
+      opacity: 0.7;
+    }
+
+    .code-editor-header {
+      height: 30px;
+      background-color: var(--dark);
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+    }
+
+    .editor-btn {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+
+    .red {
+      background-color: #ff5f56;
+    }
+
+    .yellow {
+      background-color: #ffbd2e;
+    }
+
+    .green {
+      background-color: #27c93f;
+    }
+
+    .code-editor-body {
+      padding: 15px;
+      font-family: 'Fira Code', monospace;
+      font-size: 12px;
+      color: #f8f8f2;
+      line-height: 1.5;
+    }
+
+    .code-line {
+      display: flex;
+      margin-bottom: 5px;
+    }
+
+    .line-number {
+      color: #6272a4;
+      width: 20px;
+      text-align: right;
+      margin-right: 10px;
+    }
+
+    .token-keyword {
+      color: #ff79c6;
+    }
+
+    .token-operator {
+      color: #ff79c6;
+    }
+
+    .token-string {
+      color: #f1fa8c;
+    }
+
+    .token-function {
+      color: #8be9fd;
+    }
+
+    .token-comment {
+      color: #6272a4;
+    }
+
+    .typing-animation {
+      border-right: 2px solid #f8f8f2;
+      animation: blink 1s step-end infinite;
+    }
+
+    @keyframes blink {
+
+      from,
+      to {
+        border-color: transparent;
+      }
+
+      50% {
+        border-color: #f8f8f2;
+      }
+    }
+
+    /* 粒子背景 */
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -2;
+      opacity: 0.3;
+    }
+
+    /* 添加到样式表中 */
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: var(--primary);
+    }
+
+    /* 修改媒体查询部分 */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: var(--darker);
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        transform: translateY(-150%);
+        transition: transform 0.3s ease;
+        z-index: 999;
+      }
+
+      .nav-links.active {
+        transform: translateY(0);
+      }
+
+      .navbar {
+        flex-direction: row;
+        /* 确保是水平排列 */
+        justify-content: space-between;
+        /* 这会让logo靠左，菜单按钮靠右 */
+        align-items: center;
+      }
+
+      /* 保留原有的其他调整 */
+      .hero h1 {
+        font-size: 3rem;
+      }
+
+      .projects-container {
+        grid-template-columns: 1fr;
+      }
+
+      /* 调整代码编辑器在小屏幕上的显示 */
+      .code-editor {
+        display: none;
+      }
+
+      /* 英雄区域调整 */
+      .hero {
+        text-align: center;
+        height: auto;
+        min-height: 100vh;
+        padding-top: 100px;
+        padding-bottom: 50px;
+      }
+
+      .hero-content {
+        margin: 0 auto;
+      }
+    }
+
+    .about-code-display {
+      position: relative;
+    }
+
+    .about-code-editor {
+      position: relative;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--dark);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: var(--box-shadow);
+      transform: none;
+      opacity: 1;
+      z-index: 1;
+    }
+
+    @media (max-width: 992px) {
+      .about-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .about-code-editor {
+        max-height: 300px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <h1>2025年央视315晚会总结</h1>
-        <p>"共铸诚信 提振消费"</p>
-    </header>
-    
+  <!-- 粒子背景 -->
+  <div id="particles-js"></div>
+
+  <!-- 导航栏 -->
+  <header>
     <div class="container">
-        <nav class="toc">
-            <h2>目录</h2>
-            <ul>
-                <li><a href="#introduction">引言</a></li>
-                <li><a href="#industry-problems">9大行业乱象</a></li>
-                <li><a href="#companies">曝光企业名单</a></li>
-                <li><a href="#root-causes">乱象背后的根源</a></li>
-                <li><a href="#consumer-advice">消费者如何避坑</a></li>
-                <li><a href="#consequences">企业将面临的后果</a></li>
-            </ul>
-        </nav>
-        
-        <main>
-            <section id="introduction">
-                <h2>引言</h2>
-                <p>今年的315已经结束，是时候该总结一下了。2025年央视315晚会以"共铸诚信提振消费"为主题，聚焦食品安全、公共安全、数字经济等民生领域，揭露了9大行业乱象，42家企业因侵害消费者权益被曝光。</p>
-                <p>这些乱象不仅威胁消费者健康与财产安全，更暴露出行业监管漏洞与企业的诚信缺失。以下为完整曝光名单及核心问题：</p>
-            </section>
-            
-            <section id="industry-problems">
-                <h2>触目惊心的9大行业乱象</h2>
-                
-                <div class="problem-item">
-                    <h3>1. 翻新卫生巾：残次品"二次加工"牟暴利</h3>
-                    <p><strong>核心问题：</strong>梁山希希纸制品有限公司从正规厂家低价收购本应销毁的残次品卫生巾、纸尿裤，通过简单处理后贴上知名品牌标签高价倒卖，利润高达正品10倍以上。</p>
-                    <p><strong>涉及品牌：</strong>麦酷酷、自由点、嫚熙、中亿孕婴、Babycare、全棉时代等。</p>
-                    <p><strong>危害：</strong>劣质产品细菌超标，易引发妇科疾病和皮肤过敏。</p>
-                </div>
-                
-                <div class="problem-item">
-                    <h3>2. 一次性内裤：徒手操作、灭菌造假</h3>
-                    <p><strong>核心问题：</strong>河南商丘多家工厂（如商丘梦阳服饰有限公司）生产环境脏乱，工人徒手包装，使用强力去污剂掩盖污渍，伪造"环氧乙烷灭菌"标签。</p>
-                    <p><strong>涉及品牌：</strong>浪莎、初医生、贝姿妍。</p>
-                    <p><strong>真相：</strong>宣称"纯棉"实为廉价涤纶，部分企业甚至用消毒产品许可证跨界生产。</p>
-                </div>
-                
-                <div class="problem-item">
-                    <h3>3. 维修刺客：啄木鸟平台"开个水龙头收费100元"</h3>
-                    <p><strong>套路揭秘：</strong>啄木鸟家庭维修平台培训工人虚报故障、更换配件，与维修工分成利润。有用户空调维修费高达3000元，实际成本仅200元。</p>
-                </div>
-                
-                <div class="problem-item">
-                    <h3>4. 保水虾仁：1斤虾仁7两冰，磷酸盐超标145%</h3>
-                    <p><strong>行业黑幕：</strong>湛江尚方舟、连云港渔趣多等企业用保水剂浸泡虾仁增重20%，二次包冰后含冰量达70%。磷酸盐超标可能引发心血管疾病。</p>
-                </div>
-                
-                <div class="problem-item">
-                    <h3>5. 电子签高利贷：年化利率近6000%</h3>
-                    <p><strong>平台套路：</strong>借贷宝、人人信等平台默许"砍头息"，合同金额虚高。例如借款5000元仅到账3500元，却需按全额偿还。</p>
-                </div>
-                
-                <div class="problem-item">
-                    <h3>6. 隐私窃取"黑洞"：一条信息卖6元</h3>
-                    <p><strong>技术手段：</strong>云企智能、绿信科技等公司通过爬虫窃取用户手机号、消费记录，甚至利用运营商后台获取三网大数据，精准标签达3800项。</p>
-                </div>
-                
-                <div class="problem-item">
-                    <h3>7. 骚扰电话产业链：AI机器人日拨10万通</h3>
-                    <p><strong>幕后推手：</strong>智优擎、飞鸽传书等公司使用AI合成语音拨打营销电话，伪装本地号码逃避监管，教育、医美行业为重灾区。</p>
-                </div>
-                
-                <div class="problem-item">
-                    <h3>8. 手机抽奖陷阱：话费券需15个月用完</h3>
-                    <p><strong>套路解析：</strong>诺诺网、兑吧等平台诱导用户抽奖，所谓"200元话费券"实为30张小额券，需连续充值4000元才能使用。</p>
-                </div>
-                
-                <div class="problem-item">
-                    <h3>9. 非标电线电缆：五金市场公开售卖火灾隐患</h3>
-                    <p><strong>安全隐患：</strong>南宁科德五金市场、贵阳金石五金城销售未达国标的"打折线"，近十年全国超50%重大火灾由劣质电缆引发。</p>
-                </div>
-            </section>
-            
-            <section id="companies">
-                <h2>曝光企业名单（按行业分类）</h2>
-                
-                <div class="company-list">
-                    <div class="company-category">
-                        <h4>翻新卫生巾</h4>
-                        <ul>
-                            <li>梁山希希纸制品有限公司（麦酷酷、自由点、嫚熙等）</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="company-category">
-                        <h4>一次性内裤</h4>
-                        <ul>
-                            <li>商丘梦阳服饰有限公司</li>
-                            <li>浪莎控股集团</li>
-                            <li>初医生</li>
-                            <li>贝姿妍</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="company-category">
-                        <h4>维修乱象</h4>
-                        <ul>
-                            <li>重庆啄木鸟网络科技有限公司</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="company-category">
-                        <h4>保水虾仁</h4>
-                        <ul>
-                            <li>湛江尚方舟食品有限公司</li>
-                            <li>连云港渔趣多食品有限公司</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="company-category">
-                        <h4>电子高利贷</h4>
-                        <ul>
-                            <li>借贷宝</li>
-                            <li>人人信</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="company-category">
-                        <h4>隐私窃取</h4>
-                        <ul>
-                            <li>云企智能科技</li>
-                            <li>绿信科技</li>
-                            <li>企腾网络技术（火眼云）</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="company-category">
-                        <h4>骚扰电话</h4>
-                        <ul>
-                            <li>智优擎网络科技</li>
-                            <li>飞鸽传书科技</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="company-category">
-                        <h4>非标电缆</h4>
-                        <ul>
-                            <li>安顺市金明阳电线电缆公司</li>
-                            <li>南宁科德五金市场</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            
-            <section id="root-causes">
-                <h2>乱象背后的三大根源</h2>
-                <ul>
-                    <li><strong>暴利驱动：</strong>翻新卫生巾成本不足正品1/10，保水虾仁利润翻倍。</li>
-                    <li><strong>监管漏洞：</strong>企业通过空壳公司、频繁变更法人逃避追责，甚至利用"消毒产品许可证"跨界生产。</li>
-                    <li><strong>信息不对称：</strong>消费者难以辨别"纯棉""灭菌"等虚假宣传，平台算法助推劣质商品。</li>
-                </ul>
-            </section>
-            
-            <section id="consumer-advice">
-                <h2>消费者如何避坑？</h2>
-                <ul>
-                    <li><strong>卫生用品：</strong>选择正规渠道，警惕低价促销</li>
-                    <li><strong>生鲜冻品：</strong>优先透明包装，查看冰层比例</li>
-                    <li><strong>维修服务：</strong>留存工单明细，对比平台报价</li>
-                    <li><strong>隐私保护：</strong>谨慎授权APP权限，定期清理缓存</li>
-                </ul>
-            </section>
-            
-            <section id="consequences">
-                <h2>被曝光企业将面临什么？</h2>
-                <p>部分企业已下架产品并回应调查，如梁山希希纸制品有限公司被曝后暂停生产。但消费者更关注长期整改效果。历史案例显示，曾被点名的江淮汽车通过引入质量管理体系实现逆袭，而路虎因持续问题跌出一线阵营。</p>
-                <p>2025年315晚会不仅是曝光乱象的终点，更是推动行业整改的起点。从"AI骚扰电话"到"翻新卫生巾"，每个问题都拷问企业诚信。消费者需提高警惕，同时积极通过12315平台维权。</p>
-            </section>
-        </main>
+      <nav class="navbar">
+        <a href="#" class="logo">&lt;梅友飞/&gt;</a>
+        <div class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links">
+          <a href="#home">首页</a>
+          <a href="#about">关于我</a>
+          <a href="#skills">技能</a>
+          <a href="#projects">项目经验</a>
+          <a href="#evaluation">自我评价</a>
+          <a href="#contact">联系方式</a>
+        </div>
+      </nav>
     </div>
-    
-    <footer>
-        <p>素材来自网络信息，AI脉搏公众号整理 | © 2025 消费者权益调查报告</p>
-        <p>如遇消费者权益问题，请拨打12315进行投诉与咨询</p>
-    </footer>
+  </header>
+
+  <!-- 英雄区 -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>你好，我是梅友飞</h1>
+        <p>2年经验的前端开发工程师，专注于构建现代、高性能的Web应用程序。拥有全栈能力，熟悉Vue、Next.js等前端框架，以及Node.js、Python等后端技术。</p>
+        <a href="#contact" class="btn">联系我</a>
+      </div>
+      <div class="code-editor">
+        <div class="code-editor-header">
+          <div class="editor-btn red"></div>
+          <div class="editor-btn yellow"></div>
+          <div class="editor-btn green"></div>
+        </div>
+        <div class="code-editor-body">
+          <div class="code-line">
+            <span class="line-number">1</span>
+            <span class="token-keyword">const</span> developer <span class="token-operator">=</span> {
+          </div>
+          <div class="code-line">
+            <span class="line-number">2</span>
+            <span>&nbsp;&nbsp;name:</span> <span class="token-string">"梅友飞"</span>,
+          </div>
+          <div class="code-line">
+            <span class="line-number">3</span>
+            <span>&nbsp;&nbsp;role:</span> <span class="token-string">"前端开发工程师"</span>,
+          </div>
+          <div class="code-line">
+            <span class="line-number">4</span>
+            <span>&nbsp;&nbsp;experience:</span> <span class="token-string">"2年"</span>,
+          </div>
+          <div class="code-line">
+            <span class="line-number">5</span>
+            <span>&nbsp;&nbsp;skills:</span> [<span class="token-string">"Vue"</span>, <span
+              class="token-string">"Next.js"</span>, <span class="token-string">"TypeScript"</span>, <span
+              class="token-string">"Node.js"</span>],
+          </div>
+          <div class="code-line">
+            <span class="line-number">6</span>
+            <span>&nbsp;&nbsp;learning:</span> <span class="token-string">"AI开发与应用"</span>,
+          </div>
+          <div class="code-line">
+            <span class="line-number">7</span>
+            <span>&nbsp;&nbsp;passion:</span> <span class="token-function">() =></span> <span
+              class="token-string">"创造优秀的用户体验"</span><span class="typing-animation"></span>
+          </div>
+          <div class="code-line">
+            <span class="line-number">8</span>
+            };
+          </div>
+          <div class="code-line">
+            <span class="line-number">9</span>
+            <span class="token-comment">// 我的代码，我的世界</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-down">
+      向下滚动了解更多
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- 关于我 -->
+  <div class="about-content">
+    <div class="about-code-display fade-in">
+      <div class="code-editor about-code-editor">
+        <div class="code-editor-header">
+          <div class="editor-btn red"></div>
+          <div class="editor-btn yellow"></div>
+          <div class="editor-btn green"></div>
+        </div>
+        <div class="code-editor-body">
+          <div class="code-line">
+            <span class="line-number">1</span>
+            <span class="token-keyword">const&nbsp;</span> aboutMe <span class="token-operator">=</span> {
+          </div>
+          <div class="code-line">
+            <span class="line-number">2</span>
+            <span>&nbsp;&nbsp;name:</span> <span class="token-string">"梅友飞"</span>,
+          </div>
+          <div class="code-line">
+            <span class="line-number">3</span>
+            <span>&nbsp;&nbsp;passion:</span> <span class="token-string">"前端开发"</span>,
+          </div>
+          <div class="code-line">
+            <span class="line-number">4</span>
+            <span>&nbsp;&nbsp;expertise:</span> [<span class="token-string">"Vue"</span>, <span
+              class="token-string">"Next.js"</span>, <span class="token-string">"全栈开发"</span>],
+          </div>
+          <div class="code-line">
+            <span class="line-number">5</span>
+            <span>&nbsp;&nbsp;education:</span> <span class="token-string">"本科，平顶山学院"</span>,
+          </div>
+          <div class="code-line">
+            <span class="line-number">6</span>
+            <span>&nbsp;&nbsp;experience:</span> <span class="token-string">"2 年专业经验"</span>,
+          </div>
+          <div class="code-line">
+            <span class="line-number">7</span>
+            <span>&nbsp;&nbsp;goals:</span> <span class="token-string">"不断学习与创新"</span>
+          </div>
+          <div class="code-line">
+            <span class="line-number">8</span>
+            };
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about-info fade-in">
+      <h3>前端开发工程师</h3>
+      <p>我是梅友飞，一名充满激情的前端开发工程师，拥有扎实的技术基础和2年的实际项目经验。我喜欢探索新技术，并将其应用到实际项目中，为用户创造流畅、直观的交互体验。</p>
+      <p>我的技术栈涵盖前端和后端，能够独立完成从需求分析到部署上线的全流程开发。同时，我对AI技术有浓厚兴趣，并已在实际项目中进行了深度实践。</p>
+      <div class="info-list">
+        <div class="info-item">
+          <i class="fas fa-user"></i>
+          <div>
+            <span>姓名:</span> 梅友飞
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-calendar"></i>
+          <div>
+            <span>出生日期:</span> 2002.11.02
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <span>邮箱:</span> 18737582236@163.com
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-phone"></i>
+          <div>
+            <span>电话:</span> 187 3758 2236
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-graduation-cap"></i>
+          <div>
+            <span>学历:</span> 本科，平顶山学院
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-briefcase"></i>
+          <div>
+            <span>工作经验:</span> 2年
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 技能 -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>专业技能</h2>
+      </div>
+      <div class="skills-container">
+        <div class="skill-category fade-in">
+          <h3><i class="fas fa-code"></i> 前端框架</h3>
+          <ul class="skills-list">
+            <li>熟悉JavaScript、TypeScript语法</li>
+            <li>精通Vue 2/3全家桶（Vuex/Pinia, Vue Router, Vite等）</li>
+            <li>熟悉前沿开发模式（Next.js, Vercel部署）</li>
+            <li>丰富的微信小程序开发经验</li>
+            <li>熟悉小程序生态与性能优化</li>
+          </ul>
+        </div>
+
+        <div class="skill-category fade-in">
+          <h3><i class="fas fa-laptop-code"></i> Web技术</h3>
+          <ul class="skills-list">
+            <li>深入掌握JavaScript/TypeScript核心特性</li>
+            <li>熟练使用ES6+语法</li>
+            <li>精通现代前端工程化</li>
+            <li>掌握模块化开发</li>
+            <li>熟练运用Promise/Async, Axios等异步方案</li>
+          </ul>
+        </div>
+
+        <div class="skill-category fade-in">
+          <h3><i class="fas fa-paint-brush"></i> UI开发</h3>
+          <ul class="skills-list">
+            <li>熟练运用Element UI/Vant等企业级组件库</li>
+            <li>具备定制化组件开发能力</li>
+            <li>熟悉Arco Design设计体系</li>
+            <li>熟悉Shadcn现代UI范式</li>
+            <li>熟悉Tailwind CSS</li>
+          </ul>
+        </div>
+
+        <div class="skill-category fade-in">
+          <h3><i class="fas fa-server"></i> 后端开发</h3>
+          <ul class="skills-list">
+            <li>掌握Node.js (Express)开发</li>
+            <li>掌握Python (Flask)后端开发</li>
+            <li>可自主实现RESTful API</li>
+            <li>熟悉JWT鉴权、文件处理</li>
+            <li>掌握短信验证、桶存储等功能开发</li>
+          </ul>
+        </div>
+
+        <div class="skill-category fade-in">
+          <h3><i class="fas fa-database"></i> 数据层</h3>
+          <ul class="skills-list">
+            <li>熟练操作MySQL数据库</li>
+            <li>掌握Sequelize/Prisma等ORM工具</li>
+            <li>会使用Redis</li>
+            <li>能优化高频访问场景</li>
+            <li>掌握异步任务实现</li>
+          </ul>
+        </div>
+
+        <div class="skill-category fade-in">
+          <h3><i class="fas fa-tools"></i> 工程化</h3>
+          <ul class="skills-list">
+            <li>熟练使用Git进行团队协作开发</li>
+            <li>掌握Linux基础服务部署（Nginx, PM2）</li>
+            <li>熟悉Linux基础命令</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 项目经验 -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>项目经验</h2>
+      </div>
+      <div class="projects-container">
+        <div class="project-card fade-in">
+          <div class="project-header">
+            <h3 class="project-title">迪纳曼可电商小程序</h3>
+            <div class="project-subtitle">微信小程序 + Vue2后台管理</div>
+          </div>
+          <div class="project-body">
+            <div class="project-description">
+              <p>一款典型的电商小程序，包含商品上下架、社区讨论分享、积分签到、做任务等功能。负责后台管理和小程序端开发。</p>
+            </div>
+            <div class="project-tech">
+              <h4>技术栈</h4>
+              <div class="tech-stack">
+                <span class="tech-tag">vant-weapp</span>
+                <span class="tech-tag">阿里云OSS</span>
+                <span class="tech-tag">Vue2</span>
+                <span class="tech-tag">vuex</span>
+                <span class="tech-tag">vue-router</span>
+                <span class="tech-tag">ElementUI</span>
+                <span class="tech-tag">echarts</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in">
+          <div class="project-header">
+            <h3 class="project-title">洛阳市充电桩大屏</h3>
+            <div class="project-subtitle">数据可视化项目</div>
+          </div>
+          <div class="project-body">
+            <div class="project-description">
+              <p>充电桩信息展示、预警、热力图等数据可视化大屏项目。负责前端页面实现，包括自适应布局和数据展示。</p>
+            </div>
+            <div class="project-tech">
+              <h4>技术栈</h4>
+              <div class="tech-stack">
+                <span class="tech-tag">Vue3</span>
+                <span class="tech-tag">echarts</span>
+                <span class="tech-tag">v-scale-screen</span>
+                <span class="tech-tag">百度地图</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in">
+          <div class="project-header">
+            <h3 class="project-title">Swiftgifts电商</h3>
+            <div class="project-subtitle">全栈开发项目</div>
+          </div>
+          <div class="project-body">
+            <div class="project-description">
+              <p>基于公司自有交友APP搭建的一款面向国际的电商平台，目的是方便国外用户给国内用户送礼物。独自完成全栈开发。</p>
+            </div>
+            <div class="project-tech">
+              <h4>技术栈</h4>
+              <div class="tech-stack">
+                <span class="tech-tag">Next.js</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">Vercel</span>
+                <span class="tech-tag">Redis</span>
+                <span class="tech-tag">VercelBlob</span>
+                <span class="tech-tag">Gmail</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in">
+          <div class="project-header">
+            <h3 class="project-title">数据标注管理平台</h3>
+            <div class="project-subtitle">企业管理系统</div>
+          </div>
+          <div class="project-body">
+            <div class="project-description">
+              <p>构建数据标注管理平台，涉及员工信息、项目信息、基地管理、员工日报、项目预警可视化等功能。负责前端开发。</p>
+            </div>
+            <div class="project-tech">
+              <h4>技术栈</h4>
+              <div class="tech-stack">
+                <span class="tech-tag">Vue3</span>
+                <span class="tech-tag">Element Plus</span>
+                <span class="tech-tag">echarts</span>
+                <span class="tech-tag">Ruoyi框架</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in">
+          <div class="project-header">
+            <h3 class="project-title">AI应用开发</h3>
+            <div class="project-subtitle">人工智能应用</div>
+          </div>
+          <div class="project-body">
+            <div class="project-description">
+              <p>独自搭建了多个AI应用，包含AI客服机器人(大模型+RPA)，AI模仿真实用户(基于环信的虚拟交友平台机器人)；AI高考志愿填报系统等。</p>
+            </div>
+            <div class="project-tech">
+              <h4>技术栈</h4>
+              <div class="tech-stack">
+                <span class="tech-tag">大模型</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Flask</span>
+                <span class="tech-tag">Next.js</span>
+                <span class="tech-tag">MySQL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 自我评价 -->
+  <section id="evaluation" class="section">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>自我评价</h2>
+      </div>
+      <div class="evaluation-container fade-in">
+        <div class="evaluation-items">
+          <div class="evaluation-item">
+            <i class="fas fa-check-circle"></i>
+            <div class="evaluation-text">
+              <p>全栈能力突出，能独立完成从需求分析到部署上线的全流程开发</p>
+            </div>
+          </div>
+          <div class="evaluation-item">
+            <i class="fas fa-check-circle"></i>
+            <div class="evaluation-text">
+              <p>对AI技术有深度实践，熟悉大模型应用开发</p>
+            </div>
+          </div>
+          <div class="evaluation-item">
+            <i class="fas fa-check-circle"></i>
+            <div class="evaluation-text">
+              <p>技术视野广阔，持续学习新技术并应用到实际项目中</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系方式 -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>联系方式</h2>
+      </div>
+      <div class="contact-container">
+        <div class="contact-info fade-in">
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <div class="contact-item-text">
+              <h3>电话</h3>
+              <p>187 3758 2236</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div class="contact-item-text">
+              <h3>邮箱</h3>
+              <p>18737582236@163.com</p>
+            </div>
+          </div>
+          <!-- <div class="social-links">
+            <a href="#" class="social-link">
+              <i class="fab fa-weixin"></i>
+            </a>
+            <a href="#" class="social-link">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="#" class="social-link">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div> -->
+        </div>
+        <div class="contact-info fade-in">
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="contact-item-text">
+              <h3>求职意向</h3>
+              <p>前端开发工程师</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-graduation-cap"></i>
+            <div class="contact-item-text">
+              <h3>学历</h3>
+              <p>本科，平顶山学院</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 梅友飞 — 前端开发工程师</p>
+    </div>
+  </footer>
+
+  <!-- 粒子动画JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+
+  <!-- 主要JS -->
+  <script>
+    // 粒子背景
+    particlesJS('particles-js', {
+      particles: {
+        number: {
+          value: 80,
+          density: {
+            enable: true,
+            value_area: 800
+          }
+        },
+        color: {
+          value: '#2563eb'
+        },
+        shape: {
+          type: 'circle',
+          stroke: {
+            width: 0,
+            color: '#000000'
+          },
+          polygon: {
+            nb_sides: 5
+          }
+        },
+        opacity: {
+          value: 0.5,
+          random: false,
+          anim: {
+            enable: false,
+            speed: 1,
+            opacity_min: 0.1,
+            sync: false
+          }
+        },
+        size: {
+          value: 3,
+          random: true,
+          anim: {
+            enable: false,
+            speed: 40,
+            size_min: 0.1,
+            sync: false
+          }
+        },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: '#2563eb',
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 2,
+          direction: 'none',
+          random: false,
+          straight: false,
+          out_mode: 'out',
+          bounce: false,
+          attract: {
+            enable: false,
+            rotateX: 600,
+            rotateY: 1200
+          }
+        }
+      },
+      interactivity: {
+        detect_on: 'canvas',
+        events: {
+          onhover: {
+            enable: true,
+            mode: 'grab'
+          },
+          onclick: {
+            enable: true,
+            mode: 'push'
+          },
+          resize: true
+        },
+        modes: {
+          grab: {
+            distance: 140,
+            line_linked: {
+              opacity: 1
+            }
+          },
+          bubble: {
+            distance: 400,
+            size: 40,
+            duration: 2,
+            opacity: 8,
+            speed: 3
+          },
+          repulse: {
+            distance: 200,
+            duration: 0.4
+          },
+          push: {
+            particles_nb: 4
+          },
+          remove: {
+            particles_nb: 2
+          }
+        }
+      },
+      retina_detect: true
+    });
+
+    // 滚动动画
+    const fadeElements = document.querySelectorAll('.fade-in');
+
+    function checkFade() {
+      fadeElements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const elementBottom = element.getBoundingClientRect().bottom;
+        const isVisible = (elementTop < window.innerHeight - 100) && (elementBottom > 0);
+
+        if (isVisible) {
+          element.classList.add('active');
+        }
+      });
+    }
+
+    // 初始检查
+    checkFade();
+
+    // 监听滚动事件
+    window.addEventListener('scroll', checkFade);
+
+    // 平滑滚动
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // 导航栏背景
+    window.addEventListener('scroll', function () {
+      const header = document.querySelector('header');
+
+      if (window.scrollY > 50) {
+        header.style.padding = '5px 0';
+        header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+      } else {
+        header.style.padding = '0';
+        header.style.boxShadow = 'none';
+      }
+    });
+
+    // 添加到现有JavaScript底部
+    // 汉堡菜单控制
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', function () {
+      navLinks.classList.toggle('active');
+    });
+
+    // 当点击链接时关闭菜单
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', function () {
+        navLinks.classList.remove('active');
+      });
+    });
+
+    // 当点击页面其他地方时也关闭菜单
+    document.addEventListener('click', function (event) {
+      if (!event.target.closest('.navbar')) {
+        navLinks.classList.remove('active');
+      }
+    });
+  </script>
 </body>
-</html>
